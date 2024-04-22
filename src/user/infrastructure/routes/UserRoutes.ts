@@ -15,20 +15,20 @@ import { GetUserByIdController } from '../controllers/GetUserByIdController';
 import { LoginUserController } from '../controllers/LoginUserController';
 import { EncryptionService } from '../services/EncryptionService';
 import { AuthService } from '../services/AuthService';
-import { WebSocketService } from '../services/WebSocketService';
+
 const router = express.Router();
 
 // Services
 const encryptionService = new EncryptionService();
 const authService = new AuthService();
-const webSocketService = new WebSocketService();
+
 
 // Application services
 const createUser = new CreateUser(encryptionService);
 const deleteUser = new DeleteUser();
 const getAllUsers = new GetAllUsers();
 const getUserById = new GetUserById();
-const loginUser = new LoginUser(encryptionService, authService, webSocketService);
+const loginUser = new LoginUser(encryptionService, authService,);
 const getAllUsersWithSensorsService = new GetAllUsersWithSensors();
 const getUserWithSensorsService = new GetUserWithSensors();
 
