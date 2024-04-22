@@ -2,7 +2,6 @@ import UserModel from '../domain/User';
 import { EncryptionService } from '../infrastructure/services/EncryptionService';
 import { AuthService } from '../infrastructure/services/AuthService';
 
-
 export class LoginUser {
   constructor(
     private encryptionService: EncryptionService,

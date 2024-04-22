@@ -15,13 +15,11 @@ import { GetUserByIdController } from '../controllers/GetUserByIdController';
 import { LoginUserController } from '../controllers/LoginUserController';
 import { EncryptionService } from '../services/EncryptionService';
 import { AuthService } from '../services/AuthService';
-
 const router = express.Router();
 
 // Services
 const encryptionService = new EncryptionService();
 const authService = new AuthService();
-
 
 // Application services
 const createUser = new CreateUser(encryptionService);
